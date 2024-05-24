@@ -8,3 +8,5 @@ website development, but it is something I look forward to adding to my skill se
 
 I am hoping for this website to be something a little more personal rather than professional, but I still 
 hope that this will serve as a strong introduction to my skills as a developer.
+
+The website is up and running at diego-garcia.dev for all interested.
