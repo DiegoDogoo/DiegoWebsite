@@ -1,55 +1,205 @@
-body {
-    font-family: sans-serif;
-    margin: 0; 
+*{
+    font-family: "montserrat", sans-serif;
+    margin: 0px;
+    box-sizing: border-box;
+    color: whitesmoke;
+    /* border-style: dashed; */
+    
 }
 
-header {
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
+.montserrat{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
-h1 {
-    margin-bottom: 5px; 
+::-webkit-scrollbar {
+    display: none;
 }
 
-#about {
-    padding: 20px;
+.container{
+    background-image: linear-gradient(180deg,rgba(0,0,0,1), rgba(57, 57, 57, 0.8));
+    align-items: center;
+    justify-content: center;
 }
 
-.profile-pic {
-    width: 200px;
-    height: auto;
-    border-radius: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+a{
+    text-decoration: none;
+    color: whitesmoke;
+    
 }
 
-#resume {
-    padding: 20px;
-}
-
-.job {
-    margin-bottom: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
+nav{
+    z-index: 3;
+    background-color: black;
+    border-radius: 100px;
+    position: fixed;
+    width: 99vw;
+    margin-left: 0.5vw;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 10px;
 }
+nav h1{
+    width: 50%;
+    margin-left: 2%;
+}
+.navbtn{
+    display: flex;
+    justify-content:space-between;
+    width: 25vw;
+    align-items: center;
+}
 
-.social-links li {
-    display: inline;
-    margin: 0 10px;
 
-    a {
-        color: white;
-    }
+nav ul{
+    list-style: none;
+    width: auto;
+    text-align: right;
+    padding-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: whitesmoke;
+    text-decoration:none;
+}
+nav .btn{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin-right: 3vh;
+    border-radius: 25px;
+    font-weight: 600;
+    background: none;
+    border-color: whitesmoke;
+}
+nav .btn a{
+    color: whitesmoke;
+}
+.primarybody{
+    width: 85vw;
+    margin-left: 7.5vw;
+    align-items: center;
+    justify-content: center;
     
-    :visited {
-        color: white;
-    }
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 600px;
+}
+
+.about{
+    z-index: 1;
+    margin: 10% 5% 0% 5%;
+    font-size: max(12.5px, 1vw);
+    width: 50%;
+    min-width: 40vw;
+    display: inline-block;
+}
+.profile-pic{
+    margin-top: 10%;
+    margin-right: 5%;
+    width: 50%;
+    height: 75%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+.about h1{
+    font-size: 6vw;
+}
+.about h2{
+    margin-top: 10px;
+}
+
+.projects{
+    width: 100vw;
+    margin-top: 5%;
+    text-align: center;
+    font-size: 30px;
+    height: 600px;
+}
+.projects h1{
+    margin-bottom: 50px;
+
+}
+
+
+.projcontain{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    height: 85%;
+    overflow: hidden;
+
+}
+
+.projcontain:hover .project, .projcontain:active .project{
+    filter: blur(4px);
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+}
+
+.project{
+    width: 40%;
+    height: 100%;
+    align-items: center;
+    transition: width .5s;
+    padding: 10px;
+}
+.project h2{
+    color: black;
+}
+.project p{
+    opacity: 0%;
+}
+
+.projcontain .project:hover, .projcontain .project:active {
+    opacity: 1;
+    filter: none;
+    width: 50%;
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+    
+}
+
+.proj1{
+    z-index: 1;
+    background-image: url(images/photo.jpg);
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+
+}
+
+.proj2{
+    z-index: 2;
+    width: 40%;
+    background-image: url(images/photo.jpg);
+    background-size: cover;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    margin-left: -12vw;
+}
+.proj3{
+    background-image: url(images/photo.jpg);
+    background-size: cover;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+    margin-left: -12vw;
+}
+
+
+.BottomBar{
+    margin-top: 5%;
+    background-color: black;
+    height: 150px;
+    width: 100%;
+    text-align: center;
 }
